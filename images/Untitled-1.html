@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Change Image on Hover in CSS</title>
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+            margin: auto;
+        }
+        
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+        
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Fade in Overlay</h2>
+    <p>Hover over the image to see the effect.</p>
+
+    <div class="container">
+        <img src="Flowchart-Half.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+            <img src="Flowchart.jpg" alt="Avatar" class="image">
+        </div>
+    </div>
+</body>
+
+</html>
